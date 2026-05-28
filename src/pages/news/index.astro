@@ -1,0 +1,39 @@
+---
+// src/pages/news/index.astro
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// 自动去 content/news 文件夹里抓取所有文章，并按时间倒序排好
+const allNews = await getCollection('news');
+const sortedNews = allNews.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="News 资讯 | Intron Bio">
+  <main class="py-20 md:py-32 max-w-4xl mx-auto px-6 min-h-screen">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">Latest <span class="text-cyan-400">News</span></h1>
+    <p class="text-slate-400 text-lg md:text-xl mb-20 font-light">探索内含子生物的最新动态、技术突破与科研视界。</p>
+
+    <div class="space-y-16">
+      {sortedNews.map((post) => (
+        <article class="group border-b border-slate-800/60 pb-16">
+          <div class="text-cyan-500 font-mono text-sm mb-4 bg-cyan-500/10 inline-block px-3 py-1 rounded-full">
+            {post.data.date.toISOString().split('T')[0]}
+          </div>
+          <h2 class="text-3xl font-bold text-white mb-5 group-hover:text-cyan-400 transition-colors">
+            {/* 💡 这里把 post.slug 改成了 post.id */}
+            <a href={`/news/${post.id}`}>{post.data.title}</a>
+          </h2>
+          <p class="text-slate-400 leading-relaxed text-lg mb-8 font-light">
+            {post.data.description}
+          </p>
+          <div>
+            {/* 💡 这里也把 post.slug 改成了 post.id */}
+            <a href={`/news/${post.id}`} class="text-sm font-bold text-white hover:text-cyan-400 flex items-center gap-2 transition-colors border border-slate-700 hover:border-cyan-400 px-6 py-3 rounded-full inline-flex">
+              阅读全文 <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </main>
+</Layout>

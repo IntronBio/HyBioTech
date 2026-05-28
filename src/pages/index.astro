@@ -1,0 +1,67 @@
+---
+// Intron Bio - Homepage
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="内含子生物科技 | Intron Bio">
+  <main class="py-20 md:py-32">
+    <div class="max-w-4xl">
+      <div class="inline-block px-3 py-1 border border-cyan-500/30 rounded-full text-[10px] uppercase tracking-[0.2em] text-cyan-400 mb-8 bg-cyan-500/5">
+        Molecular intelligence & Consulting
+      </div>
+      <h1 class="text-5xl md:text-8xl font-bold leading-[1.1] mb-10 tracking-tight text-white">
+        Decoding <span class="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Molecular</span><br />
+        Complexity.
+      </h1>
+      <p class="text-lg md:text-2xl text-slate-400 max-w-2xl leading-relaxed font-light">
+        我们致力于解析生命底层的复杂逻辑。通过智能化的分子技术咨询与 AI 辅助分析，协助科研团队跨越从实验设计到机制验证的鸿沟。
+      </p>
+      <div class="mt-12 flex gap-6">
+        <a href="#services" class="bg-white text-black px-8 py-4 rounded-full font-bold text-sm hover:bg-cyan-400 transition-all">开始技术咨询</a>
+        <a href="#expertise" class="px-8 py-4 rounded-full font-bold text-sm border border-slate-700 hover:border-slate-500 transition-all">探索核心能力</a>
+      </div>
+    </div>
+  </main>
+
+  <section id="services" class="py-24 border-t border-slate-900">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="group">
+        <div class="mb-6 w-12 h-[2px] bg-cyan-500 group-hover:w-24 transition-all"></div>
+        <h3 class="text-3xl font-bold mb-6 text-white italic">01. 分子生物学技术咨询</h3>
+        <p class="text-slate-400 leading-relaxed text-lg font-light">
+          针对复杂的科研课题，提供深度的实验体系优化咨询。涵盖遗传编码探针的动力学模拟、亚细胞定位机制解析、以及活体成像方案的闭环验证，确保研究路径的高效与严谨。
+        </p>
+      </div>
+
+      <div class="group">
+        <div class="mb-6 w-12 h-[2px] bg-indigo-500 group-hover:w-24 transition-all"></div>
+        <h3 class="text-3xl font-bold mb-6 text-white italic">02. 生物计算与 AI 工作流</h3>
+        <p class="text-slate-400 leading-relaxed text-lg font-light">
+          利用 AI 基础软件开发能力，为实验室定制高通量的图像处理插件与生物信息工作流。将复杂的数据处理自动化，从噪声中精准提取生物学信号。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" class="py-24 bg-slate-900/30 rounded-[3rem] px-8 md:px-16 border border-white/5">
+    <h2 class="text-sm uppercase tracking-[0.3em] text-center text-slate-500 mb-16">Our Expertise / 核心技术栈</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-cyan-400 text-3xl font-bold mb-2">Probe Design</div>
+        <div class="text-xs text-slate-500 uppercase tracking-widest">探针设计与验证</div>
+      </div>
+      <div>
+        <div class="text-cyan-400 text-3xl font-bold mb-2">Bio-Imaging</div>
+        <div class="text-xs text-slate-500 uppercase tracking-widest">生物影像解析</div>
+      </div>
+      <div>
+        <div class="text-cyan-400 text-3xl font-bold mb-2">AI Plugins</div>
+        <div class="text-xs text-slate-500 uppercase tracking-widest">AI 插件定制</div>
+      </div>
+      <div>
+        <div class="text-cyan-400 text-3xl font-bold mb-2">Mechanism</div>
+        <div class="text-xs text-slate-500 uppercase tracking-widest">底层机制论证</div>
+      </div>
+    </div>
+  </section>
+</Layout>

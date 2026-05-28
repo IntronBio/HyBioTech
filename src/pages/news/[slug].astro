@@ -1,0 +1,62 @@
+---
+// src/pages/news/[slug].astro
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+// 1. 告诉 Astro 有哪些文章需要生成网页
+export async function getStaticPaths() {
+  const newsEntries = await getCollection('news');
+  return newsEntries.map(entry => ({
+    params: { slug: entry.id }, // 获取每篇文章的唯一标识（通常是文件名）
+    props: { entry },           // 把整篇文章的数据传给下方
+  }));
+}
+
+// 2. 接收传过来的文章数据
+const { entry } = Astro.props;
+
+// 3. 将 Markdown 渲染为网页内容
+const { Content } = await render(entry);
+---
+
+<Layout title={`${entry.data.title} | Intron Bio`}>
+  <main class="py-24 md:py-32 max-w-3xl mx-auto px-6 min-h-screen">
+    
+    <a href="/news" class="text-cyan-500 hover:text-cyan-400 text-sm font-bold flex items-center gap-2 mb-12 transition-colors">
+      ← 返回资讯列表
+    </a>
+
+    <header class="mb-16 border-b border-slate-800/60 pb-10">
+      <div class="text-cyan-500 font-mono text-sm mb-6 bg-cyan-500/10 inline-block px-3 py-1 rounded-full">
+        {entry.data.date.toISOString().split('T')[0]}
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
+        {entry.data.title}
+      </h1>
+      <div class="text-slate-500 text-sm">
+        Author: {entry.data.author}
+      </div>
+    </header>
+
+      <article class="
+        prose prose-invert prose-slate 
+        max-w-none
+        /* 1. 整体字号稍微加大，增强易读性 */
+        prose-lg 
+        /* 2. 增加文字行间距 (leading-loose) */
+        prose-p:leading-loose 
+        /* 3. 增加段落之间的上下间距 (my-10) */
+        prose-p:my-10 
+        /* 4. 增加列表项之间的间距 */
+        prose-li:my-4
+        /* 5. 链接与标题的颜色 */
+        prose-a:text-cyan-400 hover:prose-a:text-cyan-300 
+        prose-headings:text-white 
+        prose-headings:mt-16 
+        prose-headings:mb-8
+      ">
+        <Content />
+      </article>
+    
+  </main>
+</Layout>
