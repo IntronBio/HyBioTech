@@ -10,7 +10,7 @@ const newsCollection = defineCollection({
     title: z.string(), 
     date: z.date(),    
     description: z.string(), 
-    author: z.string().default('Intron Bio'), 
+    author: z.string().default('HyBioTech'), 
   }),
 });
 

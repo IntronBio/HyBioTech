@@ -2,7 +2,7 @@
 title: "前沿 | David Baker课题组全面解读蛋白质计算设计的过去、现在与未来"
 date: 2026-05-12
 description: "华盛顿大学David Baker课题组在《Nature》发表重磅综述，系统梳理了全新蛋白质计算设计的方法学发展脉络，以及在关键应用方向的重要里程碑进展。"
-author: "IntronBioTech"
+author: "HyBioTech"
 ---
 
 
