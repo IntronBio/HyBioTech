@@ -14,70 +14,21 @@ author: "HyBioTech"
   </p>
 </div>
 
-<!-- ====== 传统方法 vs GEFI 对比图 ====== -->
-<div class="mb-20">
-  <svg viewBox="0 0 720 210" xmlns="http://www.w3.org/2000/svg" class="w-full">
-    <defs>
-      <linearGradient id="gCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
-        <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.03"/>
-      </linearGradient>
-      <linearGradient id="gRed" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#f87171" stop-opacity="0.10"/>
-        <stop offset="100%" stop-color="#f87171" stop-opacity="0.02"/>
-      </linearGradient>
-      <linearGradient id="gGreen" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4ade80" stop-opacity="0.12"/>
-        <stop offset="100%" stop-color="#4ade80" stop-opacity="0.02"/>
-      </linearGradient>
-    </defs>
-
-    <!-- 传统方法 -->
-    <rect x="10" y="10" width="215" height="190" rx="8" fill="url(#gRed)" stroke="#f87171" stroke-opacity="0.15"/>
-    <text x="30" y="42" fill="#f87171" font-size="12" font-weight="600" letter-spacing="2">TRADITIONAL</text>
-    <text x="30" y="70" fill="#94a3b8" font-size="14">
-      <tspan x="30" dy="0">微透析 + HPLC</tspan>
-      <tspan x="30" dy="22">时间分辨率: <tspan fill="#f87171">~ 分钟</tspan></tspan>
-      <tspan x="30" dy="22">分子特异性: <tspan fill="#fbbf24">中等</tspan></tspan>
-      <tspan x="30" dy="22">空间精度: <tspan fill="#f87171">低</tspan></tspan>
-    </text>
-
-    <!-- 电化学 -->
-    <rect x="12" y="14" width="211" height="182" rx="7" fill="none" stroke="#f87171" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="3 3"/>
-
-    <!-- 电化学 -->
-    <rect x="250" y="10" width="215" height="190" rx="8" fill="url(#gRed)" stroke="#f87171" stroke-opacity="0.15"/>
-    <text x="270" y="42" fill="#f87171" font-size="12" font-weight="600" letter-spacing="2">ELECTROCHEMICAL</text>
-    <text x="270" y="70" fill="#94a3b8" font-size="14">
-      <tspan x="270" dy="0">FSCV 快扫循环伏安</tspan>
-      <tspan x="270" dy="22">时间分辨率: <tspan fill="#4ade80">~ 100 ms</tspan></tspan>
-      <tspan x="270" dy="22">分子特异性: <tspan fill="#f87171">低</tspan></tspan>
-      <tspan x="270" dy="22">适用递质: <tspan fill="#fbbf24">仅可氧化分子</tspan></tspan>
-    </text>
-
-    <!-- 箭头 -->
-    <text x="478" y="110" fill="#475569" font-size="24">→</text>
-
-    <!-- GEFI -->
-    <rect x="500" y="10" width="210" height="190" rx="8" fill="url(#gCyan)" stroke="#22d3ee" stroke-opacity="0.25"/>
-    <text x="520" y="42" fill="#22d3ee" font-size="12" font-weight="600" letter-spacing="2">GEFI PROBES ★</text>
-    <text x="520" y="70" fill="#94a3b8" font-size="14">
-      <tspan x="520" dy="0">基因编码荧光探针</tspan>
-      <tspan x="520" dy="22">时间分辨率: <tspan fill="#4ade80">毫秒级</tspan></tspan>
-      <tspan x="520" dy="22">分子特异性: <tspan fill="#4ade80">极高</tspan></tspan>
-      <tspan x="520" dy="22">细胞类型特异性: <tspan fill="#4ade80">是</tspan></tspan>
-    </text>
-
-    <!-- 标签 -->
-    <text x="230" y="170" fill="#475569" font-size="11" text-anchor="middle">✕ 时空分辨率难以兼得</text>
-    <text x="605" y="170" fill="#22d3ee" font-size="11" text-anchor="middle" opacity="0.7">✓ 三者同时满足</text>
-  </svg>
-  <p class="text-center text-xs text-slate-600 mt-3 tracking-wide">图 1 · 神经递质检测方法的技术路线对比</p>
-</div>
+<!-- ====== 方法对比总览图 ====== -->
+<figure class="mb-20">
+  <img 
+    src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/fff7/5984720/d66bd6c6c009/nihms957907f1.jpg" 
+    alt="Genetically encoded fluorescent sensor overview" 
+    class="w-full rounded-xl border border-slate-800"
+    loading="lazy"
+  />
+  <figcaption class="text-center text-xs text-slate-500 mt-4 tracking-wide">
+    图 1 · 神经递质检测方法全景对比：从微透析、电化学到基因编码荧光探针 (GEFIs)，各方法在灵敏度、特异性、时空分辨率上的表现差异 | 来源: Wang et al. (2018) <em>Curr Opin Neurobiol</em>
+  </figcaption>
+</figure>
 
 </div>
 
-<!-- ====== 引言 ====== -->
 基因编码荧光探针 (Genetically Encoded Fluorescent Indicators, **GEFIs**) 的出现，正在从根本上改变这一局面。这类探针将分子识别元件与荧光报告基团融合表达，能够在**特定细胞类型**或**亚细胞结构**中实现对目标分子的实时"看见"。
 
 <div class="w-16 h-[1px] bg-slate-700/50 my-16 mx-auto"></div>
@@ -88,85 +39,18 @@ author: "HyBioTech"
 
 <div class="not-prose">
 
-<!-- ====== GRAB 原理示意图 ====== -->
-<div class="my-16">
-  <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" class="w-full">
-    <defs>
-      <linearGradient id="memGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#475569" stop-opacity="0.3"/>
-        <stop offset="100%" stop-color="#475569" stop-opacity="0.1"/>
-      </linearGradient>
-    </defs>
-
-    <!-- 左侧：静息态 -->
-    <text x="170" y="28" fill="#94a3b8" font-size="13" text-anchor="middle" letter-spacing="1">静息态 (Basal)</text>
-
-    <!-- 细胞膜 -->
-    <rect x="40" y="45" width="260" height="8" rx="4" fill="url(#memGrad)" stroke="#64748b" stroke-opacity="0.3"/>
-    <text x="170" y="45" fill="#64748b" font-size="9" text-anchor="middle" dy="-6">Plasma Membrane</text>
-
-    <!-- GPCR 7TM 示意 -->
-    <rect x="100" y="53" width="140" height="22" rx="4" fill="#1e293b" stroke="#475569" stroke-opacity="0.6"/>
-    <text x="170" y="68" fill="#64748b" font-size="9" text-anchor="middle">GPCR 7-TM Domain</text>
-
-    <!-- TM1-7 简易柱 -->
-    <g fill="none" stroke="#475569" stroke-opacity="0.4" stroke-width="1">
-      <rect x="107" y="30" width="9" height="52" rx="2"/>
-      <rect x="120" y="30" width="9" height="52" rx="2"/>
-      <rect x="133" y="30" width="9" height="52" rx="2"/>
-      <rect x="157" y="30" width="9" height="52" rx="2"/>
-      <rect x="170" y="30" width="9" height="52" rx="2"/>
-      <rect x="183" y="30" width="9" height="52" rx="2"/>
-      <rect x="196" y="30" width="9" height="52" rx="2"/>
-    </g>
-
-    <!-- cpEGFP (暗) -->
-    <ellipse cx="170" cy="90" rx="22" ry="20" fill="#1e293b" stroke="#475569" stroke-opacity="0.5"/>
-    <text x="170" y="94" fill="#64748b" font-size="9" text-anchor="middle">cpEGFP</text>
-    <text x="170" y="120" fill="#475569" font-size="10" text-anchor="middle">低荧光</text>
-
-    <!-- 箭头 -->
-    <text x="340" y="80" fill="#475569" font-size="28">→</text>
-    <text x="340" y="100" fill="#475569" font-size="9" text-anchor="middle">配体结合</text>
-
-    <!-- 右侧：激活态 -->
-    <text x="510" y="28" fill="#22d3ee" font-size="13" text-anchor="middle" letter-spacing="1">激活态 (Ligand-Bound) ✦</text>
-
-    <rect x="380" y="45" width="260" height="8" rx="4" fill="url(#memGrad)" stroke="#64748b" stroke-opacity="0.3"/>
-
-    <!-- NT 配体 -->
-    <circle cx="510" cy="18" r="10" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-opacity="0.5"/>
-    <text x="510" y="15" fill="#22d3ee" font-size="8" text-anchor="middle" dy="-12">Ligand</text>
-
-    <rect x="440" y="53" width="140" height="22" rx="4" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.3"/>
-    <g fill="none" stroke="#22d3ee" stroke-opacity="0.2" stroke-width="1">
-      <rect x="447" y="30" width="9" height="52" rx="2"/>
-      <rect x="460" y="30" width="9" height="52" rx="2"/>
-      <rect x="473" y="30" width="9" height="52" rx="2"/>
-      <rect x="497" y="30" width="9" height="52" rx="2"/>
-      <rect x="510" y="30" width="9" height="52" rx="2"/>
-      <rect x="523" y="30" width="9" height="52" rx="2"/>
-      <rect x="536" y="30" width="9" height="52" rx="2"/>
-    </g>
-
-    <!-- cpEGFP (亮) -->
-    <ellipse cx="510" cy="90" rx="24" ry="22" fill="#22d3ee" fill-opacity="0.15" stroke="#22d3ee" stroke-opacity="0.5"/>
-    <text x="510" y="94" fill="#22d3ee" font-size="9" text-anchor="middle">cpEGFP</text>
-    <text x="510" y="120" fill="#22d3ee" font-size="10" text-anchor="middle">高荧光 ➔</text>
-
-    <!-- 荧光信号示意 -->
-    <g transform="translate(510, 150)">
-      <rect x="-60" y="0" width="120" height="28" rx="4" fill="#22d3ee" fill-opacity="0.08"/>
-      <text x="0" y="12" fill="#22d3ee" font-size="10" text-anchor="middle">ΔF/F₀ > 200%</text>
-      <text x="0" y="26" fill="#64748b" font-size="8" text-anchor="middle">荧光响应输出</text>
-    </g>
-
-    <!-- 底部标注 -->
-    <text x="170" y="270" fill="#475569" font-size="10" text-anchor="middle">GPCR 3rd Intracellular Loop (ICL3)</text>
-    <text x="510" y="270" fill="#64748b" font-size="10" text-anchor="middle">构象重排 → cpEGFP 增亮</text>
-  </svg>
-  <p class="text-center text-xs text-slate-600 mt-3 tracking-wide">图 2 · GRAB 探针工作原理：cpEGFP 插入 GPCR 第三胞内环 (ICL3)，配体结合引发构象变化，驱动荧光增强</p>
-</div>
+<!-- ====== GRAB 传感器原理图 ====== -->
+<figure class="my-16">
+  <img 
+    src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/b3d6/11142204/a0c4e1801855/nihpp-2024.05.22.595424v1-f0001.jpg" 
+    alt="GRAB sensor design principle" 
+    class="w-full rounded-xl border border-slate-800"
+    loading="lazy"
+  />
+  <figcaption class="text-center text-xs text-slate-500 mt-4 tracking-wide">
+    图 2 · GRAB 探针的设计原理与开发流程：(A) cpEGFP 替换 GPCR 第三胞内环 (ICL3)，配体结合引发构象变化驱动荧光增强；(B–C) 受体筛选与插入位点/连接肽优化；(D–H) 选择性、药理学、光谱与动力学表征；(I–K) 活体果蝇脑内验证 | 来源: Xia et al. (2024) bioRxiv
+  </figcaption>
+</figure>
 
 </div>
 
@@ -288,7 +172,6 @@ author: "HyBioTech"
 
 <div class="not-prose">
 
-<!-- ====== 应用场景图 ====== -->
 <div class="grid md:grid-cols-3 gap-6 my-12">
 
   <div class="bg-slate-900/40 border border-slate-800 rounded-xl p-6">
@@ -332,7 +215,6 @@ author: "HyBioTech"
 
 <div class="not-prose">
 <div class="relative my-12">
-  <!-- 流程线 -->
   <div class="hidden md:block absolute top-1/2 left-0 right-0 h-[1px] bg-slate-800 -translate-y-1/2"></div>
 
   <div class="grid md:grid-cols-5 gap-4 relative">
